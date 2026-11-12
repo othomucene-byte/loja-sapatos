@@ -1,6 +1,6 @@
 # Loja Sapatos
 
-Curadoria exclusiva de calçados em couro legítimo e design ergonômico.
+Formulário de cadastro de itens da Loja Sapatos atualizado com suporte completo a imagem via URL ou upload de arquivo e pré-visualização.
 
 ## 🚀 Tecnologias
 - **React 19 + TypeScript**
