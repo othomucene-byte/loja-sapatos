@@ -6,7 +6,7 @@
   <title>Loja Sapatos</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script>
@@ -15,23 +15,23 @@
       theme: {
         extend: {
           fontFamily: {
-            heading: ['Plus Jakarta Sans', sans-serif],
-            body: ['Inter', sans-serif],
+            heading: ['Playfair Display', serif],
+            body: ['Plus Jakarta Sans', sans-serif],
           },
           colors: {
             app: {
-              bg: '#FAFAFA',
+              bg: '#FDFBF9',
               surface: '#FFFFFF',
-              surfaceAlt: '#F4F4F5',
-              border: '#E4E4E7',
-              textPrimary: '#18181B',
-              textSecondary: '#52525B',
-              textMuted: '#A1A1AA',
-              accent: '#09090B',
-              accentHover: '#27272A',
+              surfaceAlt: '#F5F2EC',
+              border: '#E8E3D9',
+              textPrimary: '#171614',
+              textSecondary: '#57534E',
+              textMuted: '#A8A29E',
+              accent: '#1C1917',
+              accentHover: '#292524',
               accentText: '#FFFFFF',
-              accentLight: '#F4F4F5',
-              success: '#16A34A',
+              accentLight: '#F5F2EC',
+              success: '#15803D',
             }
           }
         }
@@ -40,14 +40,14 @@
   </script>
   <style>
     body {
-      font-family: 'Inter', sans-serif;
-      background-color: #FAFAFA;
-      color: #18181B;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #FDFBF9;
+      color: #171614;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     h1, h2, h3, .font-heading {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: 'Playfair Display', serif;
       letter-spacing: -0.02em;
     }
     .custom-scrollbar::-webkit-scrollbar {
@@ -73,20 +73,20 @@
 <body class="min-h-screen flex flex-col custom-scrollbar">
 
   <!-- ================= 1. CLEAN STICKY NAVBAR ================= -->
-  <header class="sticky top-0 z-40 backdrop-blur-md border-b transition-all duration-200" style="background-color: rgba(253,251,249,0.9); border-color: #E4E4E7;">
+  <header class="sticky top-0 z-40 backdrop-blur-md border-b transition-all duration-200" style="background-color: rgba(253,251,249,0.9); border-color: #E8E3D9;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
       
       <!-- Brand & Tagline -->
       <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="flex items-center gap-3 group">
-        <div class="w-9 h-9 rounded-xl flex items-center justify-center font-bold text-sm transition-transform duration-200 group-hover:scale-105 shadow-xs" style="background-color: #09090B; color: #FFFFFF;">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center font-bold text-sm transition-transform duration-200 group-hover:scale-105 shadow-xs" style="background-color: #1C1917; color: #FFFFFF;">
           <i data-lucide="sparkles" class="w-4 h-4"></i>
         </div>
         <div>
-          <span class="font-heading font-bold text-base sm:text-lg tracking-tight block" style="color: #18181B;">
+          <span class="font-heading font-bold text-base sm:text-lg tracking-tight block" style="color: #171614;">
             Loja Sapatos
           </span>
-          <span class="text-[11px] hidden sm:block leading-none" style="color: #A1A1AA;">
-            Catálogo curado, experiência fluida e transaç...
+          <span class="text-[11px] hidden sm:block leading-none" style="color: #A8A29E;">
+            Curadoria exclusiva de calçados em couro legí...
           </span>
         </div>
       </a>
@@ -94,14 +94,14 @@
       <!-- Live Search Bar -->
       <div class="flex-1 max-w-sm hidden md:block">
         <div class="relative">
-          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2" style="color: #A1A1AA;"></i>
+          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2" style="color: #A8A29E;"></i>
           <input
             id="searchInput"
             type="text"
             placeholder="Buscar itens, pratos ou serviços..."
             oninput="handleSearch(this.value)"
-            class="w-full pl-9 pr-4 py-2 text-xs rounded-xl border transition-all focus:outline-none"
-            style="background-color: #FFFFFF; border-color: #E4E4E7; color: #18181B;"
+            class="w-full pl-9 pr-4 py-2 text-xs rounded-lg border transition-all focus:outline-none"
+            style="background-color: #FFFFFF; border-color: #E8E3D9; color: #171614;"
           />
         </div>
       </div>
@@ -111,8 +111,8 @@
         <!-- New Item / Action Button -->
         <button
           onclick="openCreateModal()"
-          class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-xl transition-all duration-150 active:scale-95 shadow-2xs cursor-pointer"
-          style="background-color: #F4F4F5; color: #18181B; border: 1px solid #E4E4E7;"
+          class="inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg transition-all duration-150 active:scale-95 shadow-2xs cursor-pointer"
+          style="background-color: #F5F2EC; color: #171614; border: 1px solid #E8E3D9;"
           title="Cadastrar Novo Registro"
         >
           <i data-lucide="plus" class="w-3.5 h-3.5"></i>
@@ -122,13 +122,13 @@
         <!-- Cart / Bag Button with Dynamic Counter -->
         <button
           onclick="toggleCartDrawer()"
-          class="relative inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-xl transition-all duration-150 active:scale-95 shadow-xs cursor-pointer"
-          style="background-color: #09090B; color: #FFFFFF;"
+          class="relative inline-flex items-center gap-2 px-3.5 py-2 text-xs font-semibold rounded-lg transition-all duration-150 active:scale-95 shadow-xs cursor-pointer"
+          style="background-color: #1C1917; color: #FFFFFF;"
           title="Ver Sacola / Pedido"
         >
           <i data-lucide="shopping-bag" class="w-4 h-4"></i>
           <span class="hidden sm:inline font-medium">Sacola</span>
-          <span id="cartBadgeCount" class="w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center leading-none" style="background-color: #FFFFFF; color: #09090B;">
+          <span id="cartBadgeCount" class="w-4 h-4 rounded-full text-[10px] font-bold flex items-center justify-center leading-none" style="background-color: #FFFFFF; color: #1C1917;">
             0
           </span>
         </button>
@@ -137,34 +137,34 @@
   </header>
 
   <!-- ================= 2. HERO SECTION ================= -->
-  <section class="border-b py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden" style="background-color: #FFFFFF; border-color: #E4E4E7;">
+  <section class="border-b py-12 sm:py-16 px-4 sm:px-6 relative overflow-hidden" style="background-color: #FFFFFF; border-color: #E8E3D9;">
     <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-8">
       
       <!-- Text & Value Prop -->
       <div class="flex-1 max-w-2xl space-y-4">
         <!-- Unboxed editorial metadata kiker -->
-        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest" style="color: #A1A1AA;">
-          <span>Commerce Studio &amp; Vitrine</span>
+        <div class="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest" style="color: #A8A29E;">
+          <span>Calçados &amp; Sneaker Atelier</span>
           <span aria-hidden="true">·</span>
           <span>Edição 2026</span>
           <span aria-hidden="true">·</span>
-          <span style="color: #16A34A;">Disponível Online</span>
+          <span style="color: #15803D;">Disponível Online</span>
         </div>
 
-        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight" style="color: #18181B;">
+        <h1 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight" style="color: #171614;">
           Loja Sapatos
         </h1>
 
-        <p class="text-sm sm:text-base leading-relaxed" style="color: #52525B;">
-          Catálogo curado, experiência fluida e transações instantâneas. Todas as operações são interativas, responsivas e conectadas em tempo real.
+        <p class="text-sm sm:text-base leading-relaxed" style="color: #57534E;">
+          Curadoria exclusiva de calçados em couro legítimo e design ergonômico. Todas as operações são interativas, responsivas e conectadas em tempo real.
         </p>
 
         <!-- CTA Cluster -->
         <div class="flex flex-wrap items-center gap-3 pt-2">
           <a
             href="#catalogo"
-            class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold rounded-xl transition-all duration-200 active:scale-95 shadow-sm"
-            style="background-color: #09090B; color: #FFFFFF;"
+            class="inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold rounded-lg transition-all duration-200 active:scale-95 shadow-sm"
+            style="background-color: #1C1917; color: #FFFFFF;"
           >
             <span>Explorar Coleção</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -172,8 +172,8 @@
 
           <button
             onclick="openCreateModal()"
-            class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-xl border transition-all duration-200 active:scale-95"
-            style="background-color: #F4F4F5; color: #18181B; border-color: #E4E4E7;"
+            class="inline-flex items-center gap-2 px-4 py-2.5 text-xs font-semibold rounded-lg border transition-all duration-200 active:scale-95"
+            style="background-color: #F5F2EC; color: #171614; border-color: #E8E3D9;"
           >
             <i data-lucide="sliders-horizontal" class="w-3.5 h-3.5"></i>
             <span>Personalizar Catálogo</span>
@@ -184,22 +184,22 @@
       <!-- KPI Ribbon Cluster -->
       <div class="w-full lg:w-auto grid grid-cols-1 sm:grid-cols-3 gap-3">
         
-          <div class="p-4 rounded-2xl border flex flex-col justify-between" style="background-color: #F4F4F5; border-color: #E4E4E7;">
-            <span class="text-[11px] font-medium" style="color: #A1A1AA;">Produtos Disponíveis</span>
-            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #18181B;">62 itens</span>
-            <span class="text-[10px]" style="color: #52525B;">Catálogo atualizado</span>
+          <div class="p-4 rounded-xl border flex flex-col justify-between" style="background-color: #F5F2EC; border-color: #E8E3D9;">
+            <span class="text-[11px] font-medium" style="color: #A8A29E;">Modelos em Estoque</span>
+            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #171614;">64 pares</span>
+            <span class="text-[10px]" style="color: #57534E;">Numeração 34 ao 44</span>
           </div>
         
-          <div class="p-4 rounded-2xl border flex flex-col justify-between" style="background-color: #F4F4F5; border-color: #E4E4E7;">
-            <span class="text-[11px] font-medium" style="color: #A1A1AA;">Tempo de Despacho</span>
-            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #18181B;">&lt; 24h</span>
-            <span class="text-[10px]" style="color: #52525B;">Logística própria</span>
+          <div class="p-4 rounded-xl border flex flex-col justify-between" style="background-color: #F5F2EC; border-color: #E8E3D9;">
+            <span class="text-[11px] font-medium" style="color: #A8A29E;">Primeira Troca Grátis</span>
+            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #171614;">30 dias</span>
+            <span class="text-[10px]" style="color: #57534E;">Sem burocracia</span>
           </div>
         
-          <div class="p-4 rounded-2xl border flex flex-col justify-between" style="background-color: #F4F4F5; border-color: #E4E4E7;">
-            <span class="text-[11px] font-medium" style="color: #A1A1AA;">Garantia Direta</span>
-            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #18181B;">12 meses</span>
-            <span class="text-[10px]" style="color: #52525B;">Troca descomplicada</span>
+          <div class="p-4 rounded-xl border flex flex-col justify-between" style="background-color: #F5F2EC; border-color: #E8E3D9;">
+            <span class="text-[11px] font-medium" style="color: #A8A29E;">Envio Expresso</span>
+            <span class="text-xl sm:text-2xl font-bold font-heading my-1" style="color: #171614;">24h</span>
+            <span class="text-[10px]" style="color: #57534E;">Caixa protegida</span>
           </div>
         
       </div>
@@ -207,64 +207,64 @@
   </section>
 
   <!-- ================= 3. FILTER BAR (ZERO PILL DISCIPLINE) ================= -->
-  <section id="catalogo" class="sticky top-16 z-30 border-b py-3 px-4 sm:px-6" style="background-color: rgba(253,251,249,0.92); backdrop-filter: blur(8px); border-color: #E4E4E7;">
+  <section id="catalogo" class="sticky top-16 z-30 border-b py-3 px-4 sm:px-6" style="background-color: rgba(253,251,249,0.92); backdrop-filter: blur(8px); border-color: #E8E3D9;">
     <div class="max-w-7xl mx-auto flex items-center justify-between gap-4 overflow-x-auto custom-scrollbar">
       
       <!-- Segmented Button Categories -->
-      <div class="flex items-center gap-1.5 p-1 rounded-2xl border" style="background-color: #F4F4F5; border-color: #E4E4E7;">
+      <div class="flex items-center gap-1.5 p-1 rounded-xl border" style="background-color: #F5F2EC; border-color: #E8E3D9;">
         
           <button
             onclick="setFilterCategory('Todos')"
             id="tab-0"
-            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-150 cursor-pointer whitespace-nowrap active"
-            style="background-color: #FFFFFF; color: #18181B; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"
+            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap active"
+            style="background-color: #FFFFFF; color: #171614; box-shadow: 0 1px 3px rgba(0,0,0,0.06);"
           >
             Todos
           </button>
         
           <button
-            onclick="setFilterCategory('Destaques')"
+            onclick="setFilterCategory('Tênis')"
             id="tab-1"
-            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-150 cursor-pointer whitespace-nowrap "
-            style="color: #A1A1AA;"
+            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap "
+            style="color: #A8A29E;"
           >
-            Destaques
+            Tênis
           </button>
         
           <button
-            onclick="setFilterCategory('Tecnologia')"
+            onclick="setFilterCategory('Sapatos Sociais')"
             id="tab-2"
-            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-150 cursor-pointer whitespace-nowrap "
-            style="color: #A1A1AA;"
+            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap "
+            style="color: #A8A29E;"
           >
-            Tecnologia
+            Sapatos Sociais
           </button>
         
           <button
-            onclick="setFilterCategory('Acessórios')"
+            onclick="setFilterCategory('Botas')"
             id="tab-3"
-            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-150 cursor-pointer whitespace-nowrap "
-            style="color: #A1A1AA;"
+            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap "
+            style="color: #A8A29E;"
           >
-            Acessórios
+            Botas
           </button>
         
           <button
-            onclick="setFilterCategory('Ergonomia')"
+            onclick="setFilterCategory('Sandálias')"
             id="tab-4"
-            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-xl transition-all duration-150 cursor-pointer whitespace-nowrap "
-            style="color: #A1A1AA;"
+            class="category-tab px-3 py-1.5 text-xs font-semibold rounded-lg transition-all duration-150 cursor-pointer whitespace-nowrap "
+            style="color: #A8A29E;"
           >
-            Ergonomia
+            Sandálias
           </button>
         
       </div>
 
       <!-- Live Counter & Sort Info -->
-      <div class="text-xs font-medium shrink-0 hidden sm:flex items-center gap-2" style="color: #52525B;">
+      <div class="text-xs font-medium shrink-0 hidden sm:flex items-center gap-2" style="color: #57534E;">
         <span id="filteredItemsCount">6</span> itens encontrados
         <span aria-hidden="true">·</span>
-        <span class="text-[11px]" style="color: #A1A1AA;">Ordenado por relevância</span>
+        <span class="text-[11px]" style="color: #A8A29E;">Ordenado por relevância</span>
       </div>
     </div>
   </section>
@@ -277,14 +277,14 @@
 
     <!-- Empty State if search finds nothing -->
     <div id="emptyState" class="hidden text-center py-16 px-4 space-y-3">
-      <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center text-slate-400 border border-slate-300" style="background-color: #F4F4F5;">
+      <div class="w-12 h-12 mx-auto rounded-full flex items-center justify-center text-slate-400 border border-slate-300" style="background-color: #F5F2EC;">
         <i data-lucide="search-x" class="w-6 h-6"></i>
       </div>
-      <h3 class="font-heading text-lg font-bold" style="color: #18181B;">Nenhum item encontrado</h3>
-      <p class="text-xs max-w-md mx-auto" style="color: #52525B;">
+      <h3 class="font-heading text-lg font-bold" style="color: #171614;">Nenhum item encontrado</h3>
+      <p class="text-xs max-w-md mx-auto" style="color: #57534E;">
         Tente buscar com outros termos ou alterne para a categoria "Todas".
       </p>
-      <button onclick="resetFilters()" class="px-4 py-2 text-xs font-semibold rounded-xl mt-2" style="background-color: #09090B; color: #FFFFFF;">
+      <button onclick="resetFilters()" class="px-4 py-2 text-xs font-semibold rounded-lg mt-2" style="background-color: #1C1917; color: #FFFFFF;">
         Limpar Filtros
       </button>
     </div>
@@ -292,15 +292,15 @@
 
   <!-- ================= 5. SLIDE-OVER CART DRAWER ================= -->
   <div id="cartDrawerBackdrop" onclick="toggleCartDrawer()" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"></div>
-  <aside id="cartDrawer" class="fixed right-0 top-0 bottom-0 z-50 w-full max-w-md border-l shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out" style="background-color: #FFFFFF; border-color: #E4E4E7;">
+  <aside id="cartDrawer" class="fixed right-0 top-0 bottom-0 z-50 w-full max-w-md border-l shadow-2xl flex flex-col translate-x-full transition-transform duration-300 ease-out" style="background-color: #FFFFFF; border-color: #E8E3D9;">
     
     <!-- Drawer Header -->
-    <div class="p-5 border-b flex items-center justify-between" style="border-color: #E4E4E7;">
+    <div class="p-5 border-b flex items-center justify-between" style="border-color: #E8E3D9;">
       <div class="flex items-center gap-2">
-        <i data-lucide="shopping-bag" class="w-5 h-5" style="color: #09090B;"></i>
-        <h3 class="font-heading font-bold text-base" style="color: #18181B;">Sacola de Pedidos</h3>
+        <i data-lucide="shopping-bag" class="w-5 h-5" style="color: #1C1917;"></i>
+        <h3 class="font-heading font-bold text-base" style="color: #171614;">Sacola de Pedidos</h3>
       </div>
-      <button onclick="toggleCartDrawer()" class="p-1.5 rounded-lg hover:bg-black/5 transition" style="color: #A1A1AA;">
+      <button onclick="toggleCartDrawer()" class="p-1.5 rounded-lg hover:bg-black/5 transition" style="color: #A8A29E;">
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
     </div>
@@ -311,16 +311,16 @@
     </div>
 
     <!-- Drawer Footer & Checkout -->
-    <div class="p-5 border-t space-y-3" style="background-color: #F4F4F5; border-color: #E4E4E7;">
-      <div class="flex items-center justify-between text-xs font-medium" style="color: #52525B;">
+    <div class="p-5 border-t space-y-3" style="background-color: #F5F2EC; border-color: #E8E3D9;">
+      <div class="flex items-center justify-between text-xs font-medium" style="color: #57534E;">
         <span>Subtotal</span>
-        <span id="cartSubtotalValue" class="font-bold text-sm" style="color: #18181B;">R$ 0,00</span>
+        <span id="cartSubtotalValue" class="font-bold text-sm" style="color: #171614;">R$ 0,00</span>
       </div>
-      <div class="flex items-center justify-between text-xs" style="color: #A1A1AA;">
+      <div class="flex items-center justify-between text-xs" style="color: #A8A29E;">
         <span>Entrega</span>
-        <span class="text-xs font-semibold" style="color: #16A34A;">Grátis</span>
+        <span class="text-xs font-semibold" style="color: #15803D;">Grátis</span>
       </div>
-      <div class="border-t pt-2 flex items-center justify-between text-sm font-bold" style="border-color: #E4E4E7; color: #18181B;">
+      <div class="border-t pt-2 flex items-center justify-between text-sm font-bold" style="border-color: #E8E3D9; color: #171614;">
         <span>Total Final</span>
         <span id="cartTotalValue">R$ 0,00</span>
       </div>
@@ -328,8 +328,8 @@
       <button
         onclick="checkoutCart()"
         id="checkoutBtn"
-        class="w-full py-3 rounded-xl text-xs font-bold transition-all duration-200 active:scale-95 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
-        style="background-color: #09090B; color: #FFFFFF;"
+        class="w-full py-3 rounded-lg text-xs font-bold transition-all duration-200 active:scale-95 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+        style="background-color: #1C1917; color: #FFFFFF;"
       >
         <i data-lucide="check" class="w-4 h-4"></i>
         <span>Confirmar e Finalizar Pedido</span>
@@ -339,82 +339,116 @@
 
   <!-- ================= 6. CREATE ITEM MODAL ================= -->
   <div id="createModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-200">
-    <div class="w-full max-w-lg rounded-2xl border p-6 shadow-2xl space-y-4" style="background-color: #FFFFFF; border-color: #E4E4E7;">
-      <div class="flex items-center justify-between border-b pb-3" style="border-color: #E4E4E7;">
+    <div class="w-full max-w-lg rounded-xl border p-6 shadow-2xl space-y-4" style="background-color: #FFFFFF; border-color: #E8E3D9;">
+      <div class="flex items-center justify-between border-b pb-3" style="border-color: #E8E3D9;">
         <div>
-          <h3 class="font-heading font-bold text-base" style="color: #18181B;">Novo Registro no Catálogo</h3>
-          <p class="text-xs" style="color: #A1A1AA;">Cadastre um novo produto, prato ou serviço.</p>
+          <h3 class="font-heading font-bold text-base" style="color: #171614;">Novo Registro no Catálogo</h3>
+          <p class="text-xs" style="color: #A8A29E;">Cadastre um novo produto, prato ou serviço.</p>
         </div>
-        <button onclick="closeCreateModal()" class="p-1 rounded hover:bg-black/5" style="color: #A1A1AA;">
+        <button onclick="closeCreateModal()" class="p-1 rounded hover:bg-black/5" style="color: #A8A29E;">
           <i data-lucide="x" class="w-5 h-5"></i>
         </button>
       </div>
 
       <form id="createForm" onsubmit="handleCreateItem(event)" class="space-y-3.5">
         <div>
-          <label class="block text-xs font-semibold mb-1" style="color: #52525B;">Título / Nome</label>
+          <label class="block text-xs font-semibold mb-1" style="color: #57534E;">Título / Nome</label>
           <input
             id="newItemTitle"
             type="text"
             required
             placeholder="Ex: Item Especial de Coleção"
-            class="w-full px-3 py-2 text-xs rounded-xl border focus:outline-none"
-            style="background-color: #F4F4F5; border-color: #E4E4E7; color: #18181B;"
+            class="w-full px-3 py-2 text-xs rounded-lg border focus:outline-none"
+            style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;"
           />
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs font-semibold mb-1" style="color: #52525B;">Categoria</label>
+            <label class="block text-xs font-semibold mb-1" style="color: #57534E;">Categoria</label>
             <select
               id="newItemCategory"
-              class="w-full px-3 py-2 text-xs rounded-xl border focus:outline-none"
-              style="background-color: #F4F4F5; border-color: #E4E4E7; color: #18181B;"
+              class="w-full px-3 py-2 text-xs rounded-lg border focus:outline-none"
+              style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;"
             >
-              <option value="Destaques">Destaques</option><option value="Tecnologia">Tecnologia</option><option value="Acessórios">Acessórios</option><option value="Ergonomia">Ergonomia</option>
+              <option value="Tênis">Tênis</option><option value="Sapatos Sociais">Sapatos Sociais</option><option value="Botas">Botas</option><option value="Sandálias">Sandálias</option>
             </select>
           </div>
 
           <div>
-            <label class="block text-xs font-semibold mb-1" style="color: #52525B;">Preço (R$)</label>
+            <label class="block text-xs font-semibold mb-1" style="color: #57534E;">Preço (R$)</label>
             <input
               id="newItemPrice"
               type="number"
               step="0.01"
               required
               placeholder="Ex: 249.90"
-              class="w-full px-3 py-2 text-xs rounded-xl border focus:outline-none"
-              style="background-color: #F4F4F5; border-color: #E4E4E7; color: #18181B;"
+              class="w-full px-3 py-2 text-xs rounded-lg border focus:outline-none"
+              style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;"
             />
           </div>
         </div>
 
         <div>
-          <label class="block text-xs font-semibold mb-1" style="color: #52525B;">Descrição Resumida</label>
+          <label class="block text-xs font-semibold mb-1.5" style="color: #57534E;">Imagem do Item (Upload ou URL)</label>
+          <div class="flex items-start gap-3">
+            <img
+              id="newItemImagePreview"
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+              alt="Pré-visualização"
+              class="w-16 h-16 object-cover rounded-lg border shrink-0"
+              style="border-color: #E8E3D9; background-color: #F5F2EC;"
+            />
+            <div class="flex-1 space-y-2 min-w-0">
+              <label class="flex items-center justify-center gap-1.5 px-3 py-2 text-xs font-semibold rounded-lg border cursor-pointer transition hover:opacity-90" style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;">
+                <i data-lucide="image-plus" class="w-3.5 h-3.5"></i>
+                <span id="newItemImageFileName">Escolher imagem do dispositivo</span>
+                <input
+                  id="newItemImageFile"
+                  type="file"
+                  accept="image/*"
+                  onchange="handleNewItemImageUpload(this)"
+                  class="hidden"
+                />
+              </label>
+              <input
+                id="newItemImageUrl"
+                type="url"
+                oninput="updateNewItemImagePreview(this.value)"
+                placeholder="Ou cole a URL da imagem (https://...)"
+                class="w-full px-3 py-1.5 text-xs rounded-lg border focus:outline-none"
+                style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold mb-1" style="color: #57534E;">Descrição Resumida</label>
           <textarea
             id="newItemDesc"
             rows="2"
             required
-            placeholder="Especificações, materiais ou ingredientes..."
-            class="w-full px-3 py-2 text-xs rounded-xl border focus:outline-none resize-none"
-            style="background-color: #F4F4F5; border-color: #E4E4E7; color: #18181B;"
+            placeholder="Especificações, materiais ou numeração..."
+            class="w-full px-3 py-2 text-xs rounded-lg border focus:outline-none resize-none"
+            style="background-color: #F5F2EC; border-color: #E8E3D9; color: #171614;"
           ></textarea>
         </div>
 
-        <div class="pt-2 flex items-center justify-end gap-2 border-t" style="border-color: #E4E4E7;">
+        <div class="pt-2 flex items-center justify-end gap-2 border-t" style="border-color: #E8E3D9;">
           <button
             type="button"
             onclick="closeCreateModal()"
-            class="px-4 py-2 text-xs font-semibold rounded-xl border"
-            style="background-color: #F4F4F5; color: #52525B; border-color: #E4E4E7;"
+            class="px-4 py-2 text-xs font-semibold rounded-lg border"
+            style="background-color: #F5F2EC; color: #57534E; border-color: #E8E3D9;"
           >
             Cancelar
           </button>
 
           <button
             type="submit"
-            class="px-5 py-2 text-xs font-bold rounded-xl shadow-sm"
-            style="background-color: #09090B; color: #FFFFFF;"
+            class="px-5 py-2 text-xs font-bold rounded-lg shadow-sm"
+            style="background-color: #1C1917; color: #FFFFFF;"
           >
             Salvar e Publicar
           </button>
@@ -424,20 +458,20 @@
   </div>
 
   <!-- ================= 7. TOAST NOTIFICATION ================= -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-xl shadow-xl border translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" style="background-color: #FFFFFF; border-color: #E4E4E7; color: #18181B;">
-    <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: #16A34A; color: #FFFFFF;">
+  <div id="toast" class="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-lg shadow-xl border translate-y-20 opacity-0 transition-all duration-300 pointer-events-none" style="background-color: #FFFFFF; border-color: #E8E3D9; color: #171614;">
+    <div class="w-6 h-6 rounded-full flex items-center justify-center" style="background-color: #15803D; color: #FFFFFF;">
       <i data-lucide="check" class="w-3.5 h-3.5"></i>
     </div>
     <span id="toastMsg" class="text-xs font-medium">Ação realizada com sucesso!</span>
   </div>
 
   <!-- ================= 8. QUIET EDITORIAL FOOTER ================= -->
-  <footer class="border-t mt-auto py-8 px-4 sm:px-6" style="background-color: #FFFFFF; border-color: #E4E4E7;">
-    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" style="color: #A1A1AA;">
+  <footer class="border-t mt-auto py-8 px-4 sm:px-6" style="background-color: #FFFFFF; border-color: #E8E3D9;">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs" style="color: #A8A29E;">
       <div>
-        <span class="font-heading font-semibold" style="color: #18181B;">Loja Sapatos</span>
+        <span class="font-heading font-semibold" style="color: #171614;">Loja Sapatos</span>
         <span class="mx-2">·</span>
-        <span>Commerce Studio &amp; Vitrine</span>
+        <span>Calçados &amp; Sneaker Atelier</span>
         <span class="mx-2">·</span>
         <span>Todos os direitos reservados &copy; 2026</span>
       </div>
@@ -445,8 +479,8 @@
       <div class="flex items-center gap-4">
         <a href="#catalogo" class="hover:underline">Coleção</a>
         <a href="#" onclick="openCreateModal(); return false;" class="hover:underline">Cadastrar</a>
-        <span class="inline-flex items-center gap-1.5" style="color: #16A34A;">
-          <span class="w-2 h-2 rounded-full" style="background-color: #16A34A;"></span>
+        <span class="inline-flex items-center gap-1.5" style="color: #15803D;">
+          <span class="w-2 h-2 rounded-full" style="background-color: #15803D;"></span>
           <span>Catálogo Ativo</span>
         </span>
       </div>
@@ -455,7 +489,7 @@
 
   <!-- ================= 9. COMPREHENSIVE VANILLA JAVASCRIPT LOGIC ================= -->
   <script>
-    let catalogItems = [{"id":"item-1","title":"Headphone Studio Wireless com Áudio Hi-Res","category":"Tecnologia","description":"Drivers de neodímio de 40mm, cancelamento ativo híbrido e autonomia de 45 horas.","price":"R$ 649,00","numericPrice":649,"rating":"4.9","meta":"Bluetooth 5.3 · Som Espacial","image":"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"item-2","title":"Teclado Mecânico Compacto 75% Switch Tátil","category":"Ergonomia","description":"Chassi usinado em alumínio anodizado, teclas PBT double-shot e iluminação suave.","price":"R$ 489,00","numericPrice":489,"rating":"4.8","meta":"Hot-Swap · Cabo Trançado","image":"https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"item-3","title":"Mochila Urbana Impermeável para Notebook 16\"","category":"Acessórios","description":"Tecido Cordura balístico 1000D, fechos YKK selados e suporte ergonômico lombar.","price":"R$ 299,00","numericPrice":299,"rating":"5.0","meta":"Design Premiado · 22L","image":"https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"item-4","title":"Smartwatch Esportivo com GPS Multibanda e AMOLED","category":"Tecnologia","description":"Monitoramento contínuo de frequência cardíaca, altímetro barométrico e bateria para 14 dias.","price":"R$ 799,00","numericPrice":799,"rating":"4.9","meta":"Resistente a 50m de Profundidade","image":"https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"item-5","title":"Luminária de Mesa Articulada com Temperatura de Cor","category":"Ergonomia","description":"LEDs de alto índice de reprodução de cor (CRI > 95), sensor touch e dimerização contínua.","price":"R$ 219,00","numericPrice":219,"rating":"4.7","meta":"Carregamento Sem Fio Qi na Base","image":"https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"item-6","title":"Garrafa Térmica a Vácuo em Aço 316 com Filtro","category":"Acessórios","description":"Mantém líquidos gelados por 30 horas ou quentes por 18 horas sem condensação externa.","price":"R$ 139,00","numericPrice":139,"rating":"4.9","meta":"Livre de BPA · 750ml","image":"https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=800&q=80","inStock":true}];
+    let catalogItems = [{"id":"shoe-1","title":"Tênis Urban Runner Couro Premium","category":"Tênis","description":"Solado EVA de alta absorção de impacto, cabedal respirável e palmilha anatômica.","price":"R$ 549,00","numericPrice":549,"rating":"4.9","meta":"Tamanhos 38–44 · Pronta Entrega","image":"https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"shoe-2","title":"Oxford Artesanal Couro Legítimo Marrom","category":"Sapatos Sociais","description":"Costura Blake Stitch, forro antitranspirante em pelica e acabamento escovado à mão.","price":"R$ 789,00","numericPrice":789,"rating":"5.0","meta":"Tamanhos 39–44 · Edição Atelier","image":"https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"shoe-3","title":"Bota Chelsea Camurça Impermeável","category":"Botas","description":"Elásticos laterais reforçados, solado tratorado leve e tratamento hidrofóbico.","price":"R$ 690,00","numericPrice":690,"rating":"4.8","meta":"Tamanhos 36–43 · Conforto Térmico","image":"https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"shoe-4","title":"Scarpin Clássico Bico Fino Salto Bloco","category":"Sandálias","description":"Salto estável de 6,5cm com espuma viscoelástica e couro macio de alta durabilidade.","price":"R$ 469,00","numericPrice":469,"rating":"4.9","meta":"Tamanhos 34–40 · Coleção 2026","image":"https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"shoe-5","title":"Sneaker Minimalista Off-White Leather","category":"Tênis","description":"Silhueta limpa versátil para uso casual ou social, costura reforçada na biqueira.","price":"R$ 499,00","numericPrice":499,"rating":"5.0","meta":"Tamanhos 35–44 · Mais Vendido","image":"https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=800&q=80","inStock":true},{"id":"shoe-6","title":"Mocassim Loafer Italiano em Nobuck","category":"Sapatos Sociais","description":"Levíssimo e flexível, ideal para longas jornadas com solado antiderrapante.","price":"R$ 620,00","numericPrice":620,"rating":"4.9","meta":"Tamanhos 38–44 · Feito à mão","image":"https://images.unsplash.com/photo-1533867617858-e7b97e060509?auto=format&fit=crop&w=800&q=80","inStock":true}];
     let activeCategory = 'Todos';
     let searchQuery = '';
     let cart = [];
@@ -497,9 +531,9 @@
 
       empty.classList.add('hidden');
       grid.innerHTML = filtered.map(item => `
-        <article class="p-5 ${'rounded-2xl'} border card-hover flex flex-col justify-between" style="background-color: ${'#FFFFFF'}; border-color: ${'#E4E4E7'};">
+        <article class="p-5 ${'rounded-xl'} border card-hover flex flex-col justify-between" style="background-color: ${'#FFFFFF'}; border-color: ${'#E8E3D9'};">
           <div>
-            <div class="relative aspect-4/3 w-full overflow-hidden ${'rounded-2xl'} mb-4" style="background-color: ${'#F4F4F5'};">
+            <div class="relative aspect-4/3 w-full overflow-hidden ${'rounded-xl'} mb-4" style="background-color: ${'#F5F2EC'};">
               <img
                 src="${item.image}"
                 alt="${item.title}"
@@ -510,33 +544,33 @@
             </div>
 
             <!-- Clean unboxed metadata (NO PILLS) -->
-            <div class="flex items-center gap-2 text-xs mb-2 font-medium" style="color: ${'#A1A1AA'};">
+            <div class="flex items-center gap-2 text-xs mb-2 font-medium" style="color: ${'#A8A29E'};">
               <span>${item.category}</span>
               <span aria-hidden="true">·</span>
               <span>${item.meta}</span>
               <span aria-hidden="true">·</span>
-              <span class="flex items-center gap-0.5" style="color: ${'#09090B'};">★ ${item.rating}</span>
+              <span class="flex items-center gap-0.5" style="color: ${'#1C1917'};">★ ${item.rating}</span>
             </div>
 
-            <h3 class="font-heading font-bold text-base mb-2 leading-snug" style="color: ${'#18181B'};">
+            <h3 class="font-heading font-bold text-base mb-2 leading-snug" style="color: ${'#171614'};">
               ${item.title}
             </h3>
 
-            <p class="text-xs leading-relaxed line-clamp-2 mb-4" style="color: ${'#52525B'};">
+            <p class="text-xs leading-relaxed line-clamp-2 mb-4" style="color: ${'#57534E'};">
               ${item.description}
             </p>
           </div>
 
-          <div class="pt-3 border-t flex items-center justify-between gap-3" style="border-color: ${'#E4E4E7'};">
+          <div class="pt-3 border-t flex items-center justify-between gap-3" style="border-color: ${'#E8E3D9'};">
             <div>
-              <span class="text-[10px] block" style="color: ${'#A1A1AA'};">Preço</span>
-              <span class="font-heading text-lg font-bold" style="color: ${'#18181B'};">${item.price}</span>
+              <span class="text-[10px] block" style="color: ${'#A8A29E'};">Preço</span>
+              <span class="font-heading text-lg font-bold" style="color: ${'#171614'};">${item.price}</span>
             </div>
 
             <button
               onclick="addToCart('${item.id}')"
-              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold ${'rounded-xl'} transition-all duration-150 active:scale-95 shadow-2xs cursor-pointer"
-              style="background-color: ${'#09090B'}; color: ${'#FFFFFF'};"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold ${'rounded-lg'} transition-all duration-150 active:scale-95 shadow-2xs cursor-pointer"
+              style="background-color: ${'#1C1917'}; color: ${'#FFFFFF'};"
             >
               <i data-lucide="plus" class="w-3.5 h-3.5"></i>
               <span>Adicionar</span>
@@ -556,11 +590,11 @@
       tabs.forEach(tab => {
         if (tab.textContent.trim() === cat) {
           tab.style.backgroundColor = '#FFFFFF';
-          tab.style.color = '#18181B';
+          tab.style.color = '#171614';
           tab.style.boxShadow = '0 1px 3px rgba(0,0,0,0.06)';
         } else {
           tab.style.backgroundColor = 'transparent';
-          tab.style.color = '#A1A1AA';
+          tab.style.color = '#A8A29E';
           tab.style.boxShadow = 'none';
         }
       });
@@ -643,16 +677,16 @@
         const itemTotal = item.numericPrice * item.qty;
         subtotal += itemTotal;
         return `
-          <div class="flex items-center gap-3 p-3 ${'rounded-2xl'} border" style="background-color: ${'#F4F4F5'}; border-color: ${'#E4E4E7'};">
+          <div class="flex items-center gap-3 p-3 ${'rounded-xl'} border" style="background-color: ${'#F5F2EC'}; border-color: ${'#E8E3D9'};">
             <img src="${item.image}" alt="${item.title}" class="w-12 h-12 rounded-lg object-cover shrink-0" onerror="this.src='https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?auto=format&fit=crop&w=400&q=80'" />
             <div class="flex-1 min-w-0">
-              <h4 class="text-xs font-bold truncate" style="color: ${'#18181B'};">${item.title}</h4>
-              <span class="text-[11px]" style="color: ${'#A1A1AA'};">${item.price} cada</span>
+              <h4 class="text-xs font-bold truncate" style="color: ${'#171614'};">${item.title}</h4>
+              <span class="text-[11px]" style="color: ${'#A8A29E'};">${item.price} cada</span>
             </div>
             <div class="flex items-center gap-2">
-              <button onclick="changeQty(${idx}, -1)" class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold hover:bg-black/5" style="border-color: ${'#E4E4E7'};">-</button>
+              <button onclick="changeQty(${idx}, -1)" class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold hover:bg-black/5" style="border-color: ${'#E8E3D9'};">-</button>
               <span class="text-xs font-semibold">${item.qty}</span>
-              <button onclick="changeQty(${idx}, 1)" class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold hover:bg-black/5" style="border-color: ${'#E4E4E7'};">+</button>
+              <button onclick="changeQty(${idx}, 1)" class="w-6 h-6 rounded border flex items-center justify-center text-xs font-bold hover:bg-black/5" style="border-color: ${'#E8E3D9'};">+</button>
             </div>
           </div>
         `;
@@ -702,12 +736,43 @@
       }
     }
 
+    let uploadedNewItemImageData = '';
+    const defaultItemFallbackImage = 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80';
+
+    function handleNewItemImageUpload(input) {
+      const file = input && input.files && input.files[0];
+      if (!file) return;
+      const labelEl = document.getElementById('newItemImageFileName');
+      if (labelEl) labelEl.textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        if (ev.target && typeof ev.target.result === 'string') {
+          uploadedNewItemImageData = ev.target.result;
+          const preview = document.getElementById('newItemImagePreview');
+          if (preview) preview.src = uploadedNewItemImageData;
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function updateNewItemImagePreview(url) {
+      const clean = (url || '').trim();
+      if (clean) {
+        uploadedNewItemImageData = '';
+        const preview = document.getElementById('newItemImagePreview');
+        if (preview) preview.src = clean;
+      }
+    }
+
     function handleCreateItem(e) {
       e.preventDefault();
       const title = document.getElementById('newItemTitle').value;
       const category = document.getElementById('newItemCategory').value;
       const priceNum = parseFloat(document.getElementById('newItemPrice').value) || 99;
       const desc = document.getElementById('newItemDesc').value;
+      const urlInput = document.getElementById('newItemImageUrl');
+      const typedUrl = urlInput ? urlInput.value.trim() : '';
+      const finalImage = uploadedNewItemImageData || typedUrl || defaultItemFallbackImage;
 
       const newItem = {
         id: 'custom-' + Date.now(),
@@ -718,13 +783,18 @@
         numericPrice: priceNum,
         rating: '5.0',
         meta: 'Lançamento · Exclusivo',
-        image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80',
+        image: finalImage,
         inStock: true,
       };
 
       catalogItems.unshift(newItem);
+      uploadedNewItemImageData = '';
       closeCreateModal();
       document.getElementById('createForm').reset();
+      const labelEl = document.getElementById('newItemImageFileName');
+      if (labelEl) labelEl.textContent = 'Escolher imagem do dispositivo';
+      const preview = document.getElementById('newItemImagePreview');
+      if (preview) preview.src = defaultItemFallbackImage;
       renderCatalog();
       showToast('"' + title + '" cadastrado com sucesso!');
     }
