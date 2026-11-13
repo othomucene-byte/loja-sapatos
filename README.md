@@ -1,6 +1,6 @@
 # Loja Sapatos
 
-Curadoria exclusiva de calçados em couro legítimo e design ergonômico.
+Interface atualizada preservando o projeto atual.
 
 ## 🚀 Tecnologias
 - **React 19 + TypeScript**
